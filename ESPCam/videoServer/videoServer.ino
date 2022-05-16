@@ -1,7 +1,7 @@
 /*
  * Author: Silux Castañeda
  * Board: ESP32-CAM MODEL AI THINKER
- * Description: Simple video streaming over WiFi
+ * Description: Simple video streaming over WiFi (Soft AP functions are available)
  * Based on https://randomnerdtutorials.com/esp32-cam-video-streaming-web-server-camera-home-assistant/
  */
 
@@ -203,6 +203,9 @@ void setup() {
   debugln("\nWiFi connected");
   debug("Camera Stream Ready! Go to: http://");
   debug(WiFi.localIP());
+  
+  // WiFi Soft Access Point
+  // WiFi.softAP(ssid,pass);
 
   // Start streaming web server
   startCameraServer();
